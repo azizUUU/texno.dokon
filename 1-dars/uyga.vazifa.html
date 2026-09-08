@@ -1,0 +1,66 @@
+<!Doctype html>
+<html lang="uz">
+    <head>
+        <title>Login Forma</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            }
+
+            .login-box{
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            }
+
+            #email{
+                border: 2px solid #3498db;
+                border-radius: 5px;
+            }
+
+            .h2, label, button{
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            #password{
+             border: 2px solid #3498db;
+             border-radius: 5px;   
+            }
+
+            button{
+             background-color: blue;
+             color: white;
+             padding: 10px;
+             border: none;
+             width: 100%;
+             cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="login-box">
+        <h2>Tizimga kirish</h2>
+        <form>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" placeholder="Emailingizni kiriting" style="width: 100%; margin-bottom: 15px; padding: 8px;" required><br>
+
+            <label for="password">Parol:</label><br>
+            <input type="password" id="password" placeholder="Parolingizni kiriting" style="width: 100%; margin-bottom: 15px; padding: 8px;" required><br>
+
+            <button type="submit" class="btn-submit">Kirish</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+h1{
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-family: "Changa One", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+}
+
+
+
+body{
+
+    text-align: justify;  
+
+    font-family: "Arial", sans-serif;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    margin: 0;
+
+}
+
+
+
+p{
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #333333;
+
+    text-align: justify;
+
+    margin-bottom: 15px;
+
+    }
+
+
+
+ul{
+
+  list-style-position: inside; 
+
+  padding-left: 0;
+
+}
+
+
+
+li{
+
+    padding-left: 25px;
+
+    line-height: 1.6;
+
+    text-align: justify;
+
+}
+
+
+
+a{
+
+    color: #0066cc;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+}
+
+
+
+footer{
+
+    text-align: center;
+
+    color: grey;
+
+    text-decoration: underline;
+
+}
+
+
+
+blockquote {
+
+    text-align: center;
+
+    font-style: italic;
+
+    font-size: 20px;
+
+    color: #555555;
+
+    margin: 30px 20px;
+
+    } 
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Uyga vazifa</title>
+<style>
+  .nav-item, .card, .box { border: 1px solid #ccc; padding: 8px; }
+
+  .nav-group { margin-bottom: 15px; }
+
+  .nav-item { display: inline-block; margin: 0 5px; }
+  .nav-item-2 { display: inline-block; margin: 0 8px; padding: 6px 12px; background: #f0f0f0; }
+  .card { 
+    display: inline-block; 
+    width: 150px; 
+    height: 100px; 
+    margin: 5px; 
+    text-align: center; 
+    background: #fafafa; 
+    vertical-align: top;
+  }
+
+  .hide-me { display: none; }
+  .box1 { display: block; }
+  .box2 { display: none; }
+  .box3 { display: block; }
+  .box4 { display: none; }
+  .box5 { display: block; }
+
+  .toggle-box { padding: 15px; background: #ddd; }
+  .toggle-box.hidden { display: none; }
+</style>
+</head>
+<body>
+
+<h2>Vazifa 1</h2>
+<div class="nav-group">
+  <div class="nav-item">Bosh sahifa</div>
+  <div class="nav-item">Xizmatlar</div>
+  <div class="nav-item">Aloqa</div>
+</div>
+
+<div class="nav-group">
+  <div class="nav-item-2">Bosh sahifa</div>
+  <div class="nav-item-2">Xizmatlar</div>
+  <div class="nav-item-2">Portfolio</div>
+  <div class="nav-item-2">Blog</div>
+  <div class="nav-item-2">Aloqa</div>
+</div>
+
+<div class="nav-group">
+  <div class="card">Karta 1<br>Matn</div>
+  <div class="card">Karta 2<br>Matn</div>
+  <div class="card">Karta 3<br>Matn</div>
+</div>
+
+<h2>Vazifa 2</h2>
+<div class="box hide-me">Bu element yashirilishi kerak</div>
+<div class="box">Bu element ko'rinishi kerak</div>
+
+<div class="box box1">Box 1</div>
+<div class="box box2">Box 2</div>
+<div class="box box3">Box 3</div>
+<div class="box box4">Box 4</div>
+<div class="box box5">Box 5</div>
+
+<div class="toggle-box">Bu blok "hidden" klassi qo'shilsa yo'qolishi kerak</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Topshiriqlar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                margin: 0;
+            }
+            .hero{
+                height: 400px;
+                width: 100%;
+                background-color: darkslategray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .cta-button{
+                width: 215px; 
+                height: 60px;
+                background-color: orange;
+                color: white;
+                border-radius: 5px;
+            }
+            .menu-container{
+                position: relative;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .menu-header{
+                background-color: #3498db;
+                color: white;
+                padding: 10px 20px;
+                cursor: pointer;
+                text-align: center;
+            }
+            .dropdown{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                background-color: lightgrey;
+                padding: 10px;
+                width: 100%;        
+                box-sizing: border-box;
+            }
+            .menu-container:hover .dropdown {
+                display: block;
+            }
+            .box-container {
+                margin: 40px 20px;
+            }
+            .box-shift{
+                position: relative;
+                top: 10px;
+                left: 20px;
+                width: 120px;
+                height: 50px;
+                background-color: #e74c3c;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <button class="cta-button" type="button">cta-button</button>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-header">Menu-header</div>
+            <div class="dropdown">Dropdown</div>
+        </div>
+        <div class="box-container">
+        <div class="box-shift">box-shift</div>
+        <p>Soz</p>
+      </div>
+    </body>
+</html>

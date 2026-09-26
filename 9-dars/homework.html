@@ -3,6 +3,120 @@
     <head>
         <title>Yangiliklar</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            header h1 {
+                text-align: center;
+                padding-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            header div {
+                text-align: center;
+                padding-bottom: 15px;
+                border-bottom: 2px solid #800020;
+            }
+
+            header a {
+                color: #800020;
+                text-decoration: none;
+                margin: 0 10px;
+                font-weight: bold;
+            }
+
+            .news-container {
+                display: flex;
+                gap: 20px;
+                max-width: 1100px;
+                margin: 30px auto;
+                padding: 0 20px;
+            }
+
+            .main-border {
+                flex: 1;
+                border: 1px solid #e2e2e2;     
+                background-color: #ffffff;      
+                padding: 20px;                  
+            }
+
+            .main-date {
+                display: block;
+                color: #888;
+                font-size: 13px;
+                margin-bottom: 8px;
+            }
+
+            .main-title {
+                color: #111;
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            .main-text {
+                color: #555;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 14px;
+                margin-top: 50px;
+            }
+
+            footer a {
+                color: white;
+                text-decoration: none;
+                margin: 0 5px;
+            }
+
+            @media (max-width: 768px) {
+                .news-container {
+                    flex-direction: column;
+                }
+            }
+        </style>
     </head>
+    <body>
+        <header class="container">
+            <h1>Kunlik Yangiliklar</h1>
+            <div>
+                <a href="#">Texnologiya</a>
+                <a href="#">Sport</a>
+                <a href="#">Ta'lim</a>
+            </div>
+        </header>
+
+        <div class="main-container">
+            <div class="main-border">
+                <span class="main-date">24-sentabr, 2026</span>
+                <h3 class="main-title">Birinchi maqola sarlavhasi</h3>
+                <p class="main-text">Maqola matnining qisqacha qismi shu yerda ko'rsatiladi.</p>
+            </div>
+
+            <div class="main-border">
+                <span class="main-date">23-sentabr, 2026</span>
+                <h3 class="main-title">Ikkinchi maqola sarlavhasi</h3>
+                <p class="main-text">Maqola matnining qisqacha qismi shu yerda ko'rsatiladi.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Kunlik Yangiliklar</p>
+            <div>
+                <a href="#">Telegram</a>
+                <a href="#">Instagram</a>
+            </div>
+        </footer>
+    </body>
 </html>

@@ -62,11 +62,12 @@
             text-align: center;
         }
 
-        .card img {
+        .image-placeholder {
             width: 100%;
-            height: auto;
-            margin-bottom: 15px;
+            height: 120px;
+            background-color: #e0e0e0;
             border-radius: 4px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
@@ -79,6 +80,7 @@
             text-align: center;
             font-weight: bold;
         }
+
         @media (max-width: 768px) {
             .products-list {
                 flex-direction: column;
@@ -106,22 +108,23 @@
 
     <div class="products-list">
         <div class="card">
-            <img src="Снимок экрана 2026-09-26 144459.png" alt="">
+            <div class="image-placeholder"></div>
             <h3>Mahsulot 1</h3>
             <p>45,000 so'm</p>
         </div>
 
         <div class="card">
-            <img src="Снимок экрана 2026-09-26 144459.png" alt="">
+            <div class="image-placeholder"></div>
             <h3>Mahsulot 2</h3>
             <p>72,000 so'm</p>
         </div>
 
         <div class="card">
-            <img src="Снимок экрана 2026-09-26 144459.png" alt="">
+            <div class="image-placeholder"></div>
             <h3>Mahsulot 3</h3>
             <p>120,000 so'm</p>
         </div>
     </div>
+
 </body>
 </html>

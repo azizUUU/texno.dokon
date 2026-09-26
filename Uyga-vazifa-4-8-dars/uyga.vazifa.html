@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rasmlar va Media</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .container-1-1 {
+                border: 1px solid grey;
+                background-color: #fff;
+                max-width: 1200px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .container-1-1 small {
+                color: grey;
+            }
+
+            .container-1 {
+                width: 100%;
+                max-width: 300px;
+                height: 150px;
+                background-color: #5c9ca0; 
+                margin-top: 15px; 
+                padding: 10px;
+            }
+
+            .gallery {
+                display: flex;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            .gallery img {
+                width: 120px;
+                height: 120px;
+                border: 1px solid #333;
+            }
+
+            .img-cover {
+                object-fit: cover;
+            }
+
+            .img-contain {
+                object-fit: contain;
+            }
+
+            .img-fill {
+                object-fit: fill;
+            }
+
+            .img-none {
+                object-fit: none;
+            }
+            .lamba img {
+                width: 300px;
+                height: 180px;
+                object-fit: cover; 
+                object-position: 20% 80%;
+                border: 1px solid #333;
+                margin-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-1-1">
+            <h3>1. width, max-width, height</h3>
+            <small><p>Vazifa: Pastdagi kartaga width: 100%, 
+                max-width: 300px va height: 150px qiymatlarini bering. 
+                Brauzer oynasini kichraytirib-kattalashtirib,
+                kartaning qanday o'zgarishini kuzating.</p></small>
+            <div class="container-1">
+                Bu karta o'lchamini o'zgartiring
+            </div>
+        </div>
+
+        <div class="container-1-1">
+            <h3>2. object-fit</h3>
+            <small><p>Vazifa: Pastdagi 4 ta rasmga navbat bilan 
+                object-fit: cover, contain, fill va none qiymatlarini bering.
+                Har birida rasm qanday joylashishini solishtiring.</p></small>
+            <div class="gallery">
+                <img class="img-cover" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm1">
+                <img class="img-contain" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm2">
+                <img class="img-fill" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm3">
+                <img class="img-none" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm4">
+            </div>
+        </div>
+        <div class="container-1-1">
+            <h3>3. object-fit</h3>
+            <small><p>Vazifa: Pastdagi rasmga object-position
+                      xossasini qo'shing (masalan: top, bottom yoki 20% 80%).
+                      Rasmning qaysi qismi ko'rinishini o'zgartirib ko'ring.</p></small>
+            <div class="lamba">
+                <img src="Lamborghini-Aventador-SVJ.webp" alt="rasm5">
+            </div>          
+        </div>
+    </body>
+</html>

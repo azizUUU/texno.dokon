@@ -38,21 +38,11 @@
                 border: 1px solid #333;
             }
 
-            .img-cover {
-                object-fit: cover;
-            }
+            .img-cover { object-fit: cover; }
+            .img-contain { object-fit: contain; }
+            .img-fill { object-fit: fill; }
+            .img-none { object-fit: none; }
 
-            .img-contain {
-                object-fit: contain;
-            }
-
-            .img-fill {
-                object-fit: fill;
-            }
-
-            .img-none {
-                object-fit: none;
-            }
             .lamba img {
                 width: 300px;
                 height: 180px;
@@ -61,15 +51,133 @@
                 border: 1px solid #333;
                 margin-top: 15px;
             }
+
+            .banner {
+                width: 100%;
+                height: 200px;
+                border: 1px solid #333;
+                margin-top: 15px;
+                background-image: url('Lamborghini-Aventador-SVJ.webp');
+                background-size: cover;
+                background-position: 30% 70%;
+            }
+
+            .video-box {
+                background-color: #222;
+                color: #fff;
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 14px;
+                margin-top: 15px;
+            }
+
+            .btn-hover {
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                padding: 10px 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-right: 10px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+
+            .btn-hover:hover {
+                background-color: #2b6cb0;
+            }
+
+            .btn-active:active {
+                transform: scale(0.95);
+            }
+
+            .demo-list {
+                padding-left: 20px;
+            }
+
+            .demo-list li {
+                margin-bottom: 6px;
+            }
+
+            .demo-list li:first-child {
+                color: red;
+                font-weight: bold;
+            }
+
+            .demo-list li:nth-child(2) {
+                color: blue;
+                font-weight: bold;
+            }
+
+            .demo-list li:last-child {
+                color: green;
+                font-weight: bold;
+            }
+
+            .transform-box {
+                width: 100px;
+                height: 100px;
+                background-color: #e67e22;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 15px;
+            }
+
+            .transform-box:hover {
+                transform: scale(1.1);
+            }
+
+            .transition-box {
+                width: 100px;
+                height: 100px;
+                background-color: #27ae60;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 13px;
+                font-weight: bold;
+                text-align: center;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 15px;
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .transition-box:hover {
+                background-color: #1e8449;
+                transform: translateY(-5px);
+            }
+
+            .overflow-box {
+                width: 200px;
+                height: 120px;
+                border: 1px solid #111;
+                padding: 8px;
+                font-size: 13px;
+                line-height: 1.3;
+                font-weight: bold;
+                margin-top: 15px;
+                overflow: auto;
+            }
         </style>
     </head>
     <body>
+
         <div class="container-1-1">
             <h3>1. width, max-width, height</h3>
-            <small><p>Vazifa: Pastdagi kartaga width: 100%, 
-                max-width: 300px va height: 150px qiymatlarini bering. 
-                Brauzer oynasini kichraytirib-kattalashtirib,
-                kartaning qanday o'zgarishini kuzating.</p></small>
+            <small><p>Vazifa: Pastdagi kartaga width: 100%, max-width: 300px va height: 150px qiymatlarini bering. Brauzer oynasini kichraytirib-kattalashtirib, kartaning qanday o'zgarishini kuzating.</p></small>
             <div class="container-1">
                 Bu karta o'lchamini o'zgartiring
             </div>
@@ -77,9 +185,7 @@
 
         <div class="container-1-1">
             <h3>2. object-fit</h3>
-            <small><p>Vazifa: Pastdagi 4 ta rasmga navbat bilan 
-                object-fit: cover, contain, fill va none qiymatlarini bering.
-                Har birida rasm qanday joylashishini solishtiring.</p></small>
+            <small><p>Vazifa: Pastdagi 4 ta rasmga navbat bilan object-fit: cover, contain, fill va none qiymatlarini bering. Har birida rasm qanday joylashishini solishtiring.</p></small>
             <div class="gallery">
                 <img class="img-cover" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm1">
                 <img class="img-contain" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm2">
@@ -87,14 +193,59 @@
                 <img class="img-none" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="rasm4">
             </div>
         </div>
+
         <div class="container-1-1">
-            <h3>3. object-fit</h3>
-            <small><p>Vazifa: Pastdagi rasmga object-position
-                      xossasini qo'shing (masalan: top, bottom yoki 20% 80%).
-                      Rasmning qaysi qismi ko'rinishini o'zgartirib ko'ring.</p></small>
+            <h3>3. object-position</h3>
+            <small><p>Vazifa: Pastdagi rasmga object-position xossasini qo'shing (masalan: top, bottom yoki 20% 80%). Rasmning qaysi qismi ko'rinishini o'zgartirib ko'ring.</p></small>
             <div class="lamba">
                 <img src="Lamborghini-Aventador-SVJ.webp" alt="rasm5">
             </div>          
         </div>
+
+        <div class="container-1-1">
+            <h3>4. background-size va background-position (2 ta qiymat)</h3>
+            <small><p>Vazifa: Pastdagi bannerga background-size: cover bering va background-positionni 2 ta qiymat bilan yozing (masalan: right top yoki 30% 70%). Fon rasmi qanday joylashishini kuzating.</p></small>
+            <div class="banner"></div>
+        </div>
+
+        <div class="container-1-1">
+            <h3>5. aspect-ratio</h3>
+            <small><p>Vazifa: Pastdagi quti (video o'rnini bosuvchi) uchun aspect-ratio: 16 / 9 qiling. Keyin 4/3 yoki 1/1 qiymatlar bilan ham sinab ko'ring, farqini yozing.</p></small>
+            <div class="video-box">16:9 nisbatdagi video quti</div>
+        </div>
+
+        <div class="container-1-1">
+            <h3>6. Pseudo-klasslar</h3>
+            <small><p>Vazifa: Tugmaga :hover va :active holatlari uchun stil qo'shing. Ro'yxatdagi elementlarga :nth-child(2), :first-child, :last-child pseudo-klasslarini qo'llang.</p></small>
+            <button class="btn-hover">Sichqoncha olib boring</button>
+            <button class="btn-hover btn-active">Bosib ko'ring</button>
+            <ul class="demo-list">
+                <li>Birinchi element</li>
+                <li>Ikkinchi element</li>
+                <li>Uchinchi element</li>
+                <li>Oxirgi element</li>
+            </ul>
+        </div>
+
+        <div class="container-1-1">
+            <h3>7. transform</h3>
+            <small><p>Vazifa: Kartaga sichqoncha ustiga kelganda (:hover) transform xossasini qo'shing: scale(), rotate() yoki translateY() dan birini sinab ko'ring.</p></small>
+            <div class="transform-box">Meni bosing</div>
+        </div>
+
+        <div class="container-1-1">
+            <h3>8. transition</h3>
+            <small><p>Vazifa: Pastdagi karta hoverda o'zgaradi, lekin harakat keskin (birdan) sodir bo'ladi. transition xossasini qo'shib, o'zgarishni silliq (0.3 soniyada) qiling.</p></small>
+            <div class="transition-box">Silliq o'zgarish</div>
+        </div>
+
+        <div class="container-1-1">
+            <h3>9. overflow</h3>
+            <small><p>Vazifa: Pastdagi matn qutisi kichik, lekin matn uzun. overflow xossasini auto, scroll va hidden qiymatlari bilan sinab, farqini tushuntiring.</p></small>
+            <div class="overflow-box">
+                Bu juda uzun matn. CSS'da overflow xossasi elementning ichiga sig'may qolgan contentni qanday ko'rsatish kerakligini belgilaydi. Uni auto, scroll, hidden va visible qiymatlari bilan sinab ko'ring va natijalarni solishtiring.
+            </div>
+        </div>
+
     </body>
 </html>

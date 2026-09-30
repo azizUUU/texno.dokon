@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imtihon</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #fcfbfa;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 2700px;
+        }
+        .Menyu-container{
+            background-image: linear-gradient(rgba(246, 163, 11, 0.4), rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&h=900&fit=crop&auto=format);
+            min-height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+        }
+        nav{
+            background-color: white;
+            width: 100%;
+            padding: 0 50px;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-header {
+            display: flex;
+            gap: 30px;
+        }
+        nav a{
+            color: rgb(92, 58, 30);
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .Menyu-text{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .Menyu{
+            color: white;
+            max-width: 700px;
+            margin: auto 80px;
+        }
+        .Menyu h5{
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: 1px solid rgba(201, 123, 46, 0.8);
+            background-color: rgba(78, 61, 37, 0.901);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            color: orange;
+        }
+        .Menyu h1{
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .Menyu h1 span{
+            color: rgb(212, 143, 75);
+        }
+        .Menyu p{
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #f1f1f1;
+        }
+        .btn-container{
+            display: flex;
+            gap: 20px;
+        }
+        .btn-container button{
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-knopka {
+            background-color: rgb(201, 123, 46);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.15s;
+        }
+        .btn-knopka:hover {
+            background-color: rgb(240, 143, 53);
+        }
+        .btn-knopka2 {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+        .btn-knopka2:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .Ikkinchi-Menyu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            padding-top: 80px;
+            text-align: center;
+        }
+        .Ikkinchi-Menyu h1{
+            color: rgb(59, 31, 10);
+            font-size: 45px;
+        }
+        .Taklif{
+            color: rgb(201, 123, 46);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        .Ikkinchi-Menyu p{
+            color: rgb(122, 99, 82);
+            max-width: 600px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .Ikkinchi-Menyu-A{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        .Ikkinchi-Menyu-A a{
+            border: 1.5px solid rgb(212, 191, 168);
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 8px 20px;
+            color: rgb(122, 99, 82);
+            transition: 0.3s;
+        }
+        .Ikkinchi-Menyu-A a:hover, .Ikkinchi-Menyu-A a.active {
+            background-color: rgb(201, 123, 46);
+            color: white;
+            border-color: rgb(201, 123, 46);
+        }
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 20px;
+            color: rgb(59, 31, 10);
+        }
+        .card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: rgb(201, 123, 46);
+        }
+        .card p {
+            font-size: 14px;
+            color: rgb(122, 99, 82);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.4;
+        }
+        .card button {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: 1px solid rgb(201, 123, 46);
+            color: rgb(201, 123, 46);
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .card button:hover {
+            background-color: rgb(201, 123, 46);
+            color: white;
+        }
+        .Aloqa-1bolim{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 100px;
+            gap: 30px;
+        }
+        .Aloqa-1bolim span{
+           color: rgb(201, 123, 46);
+        }
+        .Aloqa-1bolim h1{
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-size: 50px;
+           color: rgb(59, 31, 10)
+        }
+        .Aloqa-1bolim p{
+            color: rgb(122, 99, 82);
+        }
+        .Menyu-3bolim{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 40px auto 80px auto;
+            padding: 0 20px;
+            text-align: left;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            min-width: 350px;
+        }
+        .form-group.full-width {
+            flex-basis: 100%;
+        }
+        .form-group label {
+            font-size: 15px;
+            font-weight: bold;
+            color: rgb(59, 31, 10);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            border: 1.5px solid rgb(212, 191, 168);
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 15px;
+            outline: none;
+            background-color: white;
+            color: #333;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: rgb(201, 123, 46);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background-color: rgb(201, 123, 46);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: rgb(240, 143, 53);
+        }
+        footer {
+            background-color: rgb(44, 23, 7);
+            color: rgb(212, 191, 168);
+            text-align: center;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        footer .footer-logo {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(212, 143, 75);
+            font-weight: bold;
+        }
+        footer p {
+            font-size: 14px;
+            color: rgb(180, 155, 133);
+        }
+    </style>
+</head>
+<body>
+    <section class="Menyu-container">
+        <header>
+            <nav>
+                <span>
+                    <a class="Menyu-text" href="#">☕ Qahvaxona</a>
+                </span>
+                <div class="nav-header">
+                    <a href="#">Menyu</a>
+                    <a href="#">Bog'lanish</a>
+                </div>
+            </nav>
+        </header>
+        
+        <div class="Menyu">
+            <h5>Toshkent Markazida</h5>
+            <h1>Har qultumda <br> <span>iliq his</span></h1>
+            <p>Dunyoning eng sara qahva donlari, mohir baristalar qo'li <br> va iliq muhit — barchasi siz uchun.</p>
+            <div class="btn-container">
+                <button type="button" class="btn-knopka">
+                    Menyuni ko'rish
+                </button>
+                <button type="button" class="btn-knopka2">
+                    Bog'lanish
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="Ikkinchi-Menyu">
+            <span class="Taklif">Bizning Taklif</span>
+            <h1>Menyu</h1>
+            <p>Har bir ichimlik maxsus qahva donlari va professional usulda tayyorlanadi.</p>  
+        </div>
+        
+        <div class="Ikkinchi-Menyu-A">
+            <a href="#">Barchasi</a>
+            <a href="#">Issiq</a>
+            <a href="#">Sovuq</a>
+        </div>
+
+        <div class="gallery">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=400&h=300&fit=crop&auto=format" alt="Espresso">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Espresso</h2> 
+                        <span class="price">12 000 so'm</span>
+                    </div>
+                    <p>Kuchli va to'q, italyan usulda tayyorlangan klassik qahva.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&h=300&fit=crop&auto=format" alt="Cappuccino">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Cappuccino</h2>
+                        <span class="price">18 000 so'm</span>
+                    </div>
+                    <p>Espresso, bug'langan sut va ko'pikli sut qatlami bilan.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop&auto=format" alt="Cold Brew">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Cold Brew</h2>
+                        <span class="price">22 000 so'm</span>
+                    </div>
+                    <p>24 soat sovuq suvda demlangan, yumshoq va lazzatli.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=400&h=300&fit=crop&auto=format" alt="Latte">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Latte</h2>
+                        <span class="price">20 000 so'm</span>
+                    </div>
+                    <p>Ipak kabi yumshoq sut bilan uyg'unlashgan espresso.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=400&h=300&fit=crop&auto=format" alt="Matcha Latte">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Matcha Latte</h2>
+                        <span class="price">24 000 so'm</span>
+                    </div>
+                    <p>Yapon yashil choy kukumi va bug'langan sut kombinatsiyasi.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop&auto=format" alt="Frappe">
+                <div class="card-content">
+                    <div class="card-header">
+                        <h2>Frappe</h2>
+                        <span class="price">26 000 so'm</span>
+                    </div>
+                    <p>Muz, sut va qahva bilan blenderlangan salqin ichimlik.</p>
+                    <button type="button">Buyurtma berish</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="Aloqa-1bolim">
+            <span>Aloqa</span>
+            <h1>Biz bilan bog'laning</h1>
+            <p>Savollaringiz bormi? Xabar yozing — tez orada javob beramiz.</p>
+        </div>
+        <div class="Menyu-3bolim">
+            <div class="form-group">
+                <label for="name">Ism *</label>
+                <input type="text" id="name" placeholder="Ismingiz">
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" placeholder="+998 90 000 00 00">
+            </div>
+            <div class="form-group">
+                <label for="gmail">Email *</label>
+                <input type="email" id="gmail" placeholder="email@manzil.uz">
+            </div>
+            <div class="form-group full-width">
+                <label for="message">Xabar *</label>
+                <textarea id="message" placeholder="Xabaringizni yozing..." rows="5"></textarea>
+            </div>
+            <button type="button" class="submit-btn">Yuborish</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">☕ Qahvaxona</div>
+        <p>Toshkent, Chilonzor tumani, Navruz ko'chasi 12 · Har kuni 08:00 — 22:00</p>
+        <p>© 2024 Qahvaxona. Barcha huquqlar himoyalangan.</p>
+    </footer>
+</body>
+</html>
